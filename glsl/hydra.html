@@ -17,36 +17,31 @@
     <script src="https://unpkg.com/hydra-synth"></script>
   </head>
   <body>
-    <!--<script>
-         var password = "MakeThings#1";
-         (function passcodeprotect() {
-            var passcode = prompt("Enter PassCode");
-            while (passcode !== password) {
-               alert("Incorrect PassCode");
-               return passcodeprotect();
-            }
-         }());
-         alert('Welcome To GRNCH.xyz!');
-    </script>-->
+    
     <h1>hydra inside a webpage</h1>
+
     <button onclick="osc(20).rotate(0, 0.1).modulate(osc()).out()"> oscillator </button>
     <button onclick="useCamera()"> camera </button>
     <button onclick="feedback()"> feedback </button>
+
     <p style="color:#3301ff;">example of using <a href="https://hydra-editor.glitch.me">hydra</a> inside of an html site</p>
       <p style="color:#3301ff;">for more info, see: <a href="https://github.com/ojack/hydra-synth">https://github.com/ojack/hydra-synth</a> 
         or edit the <a href="https://glitch.com/edit/#!/hydra-webpage">source of this page</a></p>
     <p style="color:#3301ff;">by <a href="https://ojack.github.io">olivia</a>
     </p>
+
     <div id="wrapper">
     	<div style="position: absolute; left: 10px; top: 300px; width:200px; height:100px; background-color: yellow;">
              <canvas id="myCanvas" width="1920px" height="1920px"></canvas>
         </div>
+
         <div style="position: absolute; z-index: 1; left: 150px; top: 400px; width:100px; height:20px; background-color: none;">
              <h1>GRNCH GLSL</h1>
   	     <p><a href="http://grnch.xyz" target="_blank">this source.</a></p>
         </div>
     </div>
     <script>
+
       // create a new hydra-synth instance
       var hydra = new Hydra({
         canvas: document.getElementById("myCanvas"),
